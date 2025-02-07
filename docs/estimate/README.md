@@ -176,89 +176,91 @@ Estimate the cost of a single or multi-component LLM project
 **Response**:
 ```
 {
-   "project_name": "my llm project",
-   "components":[
-      {
-         "component_index": 0,
-         "component_name": "my-component-00",
-         "n_input_tokens": 10000000,
-         "n_output_tokens": 0,
-         "llm":{
-            "provider_id": "openai",
-            "provider_name_pretty": "OpenAI",
-            "model_id": "openai.text-embedding-3-small",
-            "model_name_pretty": "Text Embedding 3 Small",
-            "cost_per_1k_input_tokens": 2e-05,
-            "cost_per_1k_output_tokens": 0.0
+   "estimate":{
+      "project_name":"my llm project",
+      "components":[
+         {
+            "component_index":0,
+            "component_name":"my-component-00",
+            "n_input_tokens":10000000,
+            "n_output_tokens":0,
+            "llm":{
+               "provider_id":"openai",
+               "provider_name_pretty":"OpenAI",
+               "model_id":"openai.text-embedding-3-small",
+               "model_name_pretty":"Text Embedding 3 Small",
+               "cost_per_1k_input_tokens":2e-05,
+               "cost_per_1k_output_tokens":0.0
+            },
+            "recurrence":"None",
+            "cost":{
+               "daily_input_cost":0.0,
+               "weekly_input_cost":0.0,
+               "monthly_input_cost":0.0,
+               "yearly_input_cost":0.0,
+               "one_time_input_cost":0.2,
+               "daily_output_cost":0.0,
+               "weekly_output_cost":0.0,
+               "monthly_output_cost":0.0,
+               "yearly_output_cost":0.0,
+               "one_time_output_cost":0.0,
+               "daily_total_cost":0.0,
+               "weekly_total_cost":0.0,
+               "monthly_total_cost":0.0,
+               "yearly_total_cost":0.0,
+               "one_time_total_cost":0.2
+            }
          },
-         "recurrence": "None",
-         "cost": {
-            "daily_input_cost": 0.0,
-            "weekly_input_cost": 0.0,
-            "monthly_input_cost": 0.0,
-            "yearly_input_cost": 0.0,
-            "one_time_input_cost": 0.2,
-            "daily_output_cost": 0.0,
-            "weekly_output_cost": 0.0,
-            "monthly_output_cost": 0.0,
-            "yearly_output_cost": 0.0,
-            "one_time_output_cost": 0.0,
-            "daily_total_cost": 0.0,
-            "weekly_total_cost": 0.0,
-            "monthly_total_cost": 0.0,
-            "yearly_total_cost": 0.0,
-            "one_time_total_cost": 0.2
+         {
+            "component_index":1,
+            "component_name":"my-component-01",
+            "n_input_tokens":10000000,
+            "n_output_tokens":50000000,
+            "llm":{
+               "provider_id":"anthropic",
+               "provider_name_pretty":"Anthropic",
+               "model_id":"anthropic.claude-3.5-sonnet.bedrock",
+               "model_name_pretty":"Claude 3.5 Sonnet (AWS Bedrock)",
+               "cost_per_1k_input_tokens":0.003,
+               "cost_per_1k_output_tokens":0.015
+            },
+            "recurrence":"monthly",
+            "cost":{
+               "daily_input_cost":0.9856262833675564,
+               "weekly_input_cost":6.8993839835728945,
+               "monthly_input_cost":30.0,
+               "yearly_input_cost":360.0,
+               "one_time_input_cost":0.0,
+               "daily_output_cost":24.640657084188913,
+               "weekly_output_cost":172.48459958932239,
+               "monthly_output_cost":750.0,
+               "yearly_output_cost":9000.0,
+               "one_time_output_cost":0.0,
+               "daily_total_cost":25.626283367556468,
+               "weekly_total_cost":179.38398357289526,
+               "monthly_total_cost":780.0,
+               "yearly_total_cost":9360.0,
+               "one_time_total_cost":0.0
+            }
          }
-      },
-      {
-         "component_index": 1,
-         "component_name": "my-component-01",
-         "n_input_tokens": 10000000,
-         "n_output_tokens": 50000000,
-         "llm": {
-            "provider_id": "anthropic",
-            "provider_name_pretty": "Anthropic",
-            "model_id": "anthropic.claude-3.5-sonnet.bedrock",
-            "model_name_pretty": "Claude 3.5 Sonnet (AWS Bedrock)",
-            "cost_per_1k_input_tokens": 0.003,
-            "cost_per_1k_output_tokens": 0.015
-         },
-         "recurrence": "monthly",
-         "cost":{
-            "daily_input_cost": 0.9856262833675564,
-            "weekly_input_cost": 6.8993839835728945,
-            "monthly_input_cost": 30.0,
-            "yearly_input_cost": 360.0,
-            "one_time_input_cost": 0.0,
-            "daily_output_cost": 24.640657084188913,
-            "weekly_output_cost": 172.48459958932239,
-            "monthly_output_cost": 750.0,
-            "yearly_output_cost": 9000.0,
-            "one_time_output_cost": 0.0,
-            "daily_total_cost": 25.626283367556468,
-            "weekly_total_cost": 179.38398357289526,
-            "monthly_total_cost": 780.0,
-            "yearly_total_cost": 9360.0,
-            "one_time_total_cost": 0.0
-         }
+      ],
+      "cost":{
+         "daily_input_cost":0.9856262833675564,
+         "weekly_input_cost":6.8993839835728945,
+         "monthly_input_cost":30.0,
+         "yearly_input_cost":360.0,
+         "one_time_input_cost":0.2,
+         "daily_output_cost":24.640657084188913,
+         "weekly_output_cost":172.48459958932239,
+         "monthly_output_cost":750.0,
+         "yearly_output_cost":9000.0,
+         "one_time_output_cost":0.0,
+         "daily_total_cost":25.626283367556468,
+         "weekly_total_cost":179.38398357289526,
+         "monthly_total_cost":780.0,
+         "yearly_total_cost":9360.0,
+         "one_time_total_cost":0.2
       }
-   ],
-   "cost":{
-      "daily_input_cost": 0.9856262833675564,
-      "weekly_input_cost": 6.8993839835728945,
-      "monthly_input_cost": 30.0,
-      "yearly_input_cost": 360.0,
-      "one_time_input_cost": 0.2,
-      "daily_output_cost": 24.640657084188913,
-      "weekly_output_cost": 172.48459958932239,
-      "monthly_output_cost": 750.0,
-      "yearly_output_cost": 9000.0,
-      "one_time_output_cost": 0.0,
-      "daily_total_cost": 25.626283367556468,
-      "weekly_total_cost": 179.38398357289526,
-      "monthly_total_cost": 780.0,
-      "yearly_total_cost": 9360.0,
-      "one_time_total_cost": 0.2
    }
 }
 ```
