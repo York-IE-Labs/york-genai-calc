@@ -3,6 +3,11 @@
 ## Description
 CLI calculator estimating cost of multi-component LLM projects
 
+## Installation
+```
+pip install https://github.com/York-IE-Labs/york-genai-calc
+```
+
 ## Synopsis
 `york-genai-calc [options] <command> [parameters]`  
 
@@ -15,4 +20,4 @@ Use _**york-genai-calc -h**_ for global help. Use _**york-genai-calc \<command\>
 - [`mapping`](docs/mapping/README.md)
 
 ## Sample Project Definitions
-See `estimate` command sample inputs at [york-genai-calc/test](test).
+See `estimate` command sample inputs [here](test/estimate).
