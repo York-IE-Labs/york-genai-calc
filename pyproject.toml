@@ -1,0 +1,23 @@
+[build-system]
+requires = [ "setuptools" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "york-genai-calc"
+version = "0.0.1"
+description = "A calculator to estimate the cost of multi-component LLM projects"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+authors = [{ name = "Joe Small", email = "jsmall@york.ie" }]
+maintainers = [{ name = "Joe Small", email = "jsmall@york.ie" }]
+
+dependencies = [ "pydantic" ]
+
+[project.urls]
+"Homepage" = "https://github.com/York-IE-Labs/york-genai-calc"
+"Source" = "https://github.com/York-IE-Labs/york-genai-calc"
+
+[project.scripts]
+york-genai-calc = "york_genai_calc.cli:main"
