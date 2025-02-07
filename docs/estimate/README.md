@@ -46,57 +46,59 @@ Estimate the cost of a single or multi-component LLM project
 **Response**:
 ```
 {
-    "project_name": "string",
-    "components":[
-        {
-             "component_index": int,
-             "component_name":"string",
-             "n_input_tokens": int,
-             "n_output_tokens": int,
-             "llm":{
-                "provider_id": "string",
-                "provider_name_pretty": "string",
-                "model_id": "string",
-                "model_name_pretty": "string",
-                "cost_per_1k_input_tokens": float,
-                "cost_per_1k_output_tokens": float
-             },
-             "recurrence": "string",
-             "cost":{
-                "daily_input_cost": float,
-                "weekly_input_cost": float,
-                "monthly_input_cost": float,
-                "yearly_input_cost": float,
-                "one_time_input_cost": float,
-                "daily_output_cost": float,
-                "weekly_output_cost": float,
-                "monthly_output_cost": float,
-                "yearly_output_cost": float,
-                "one_time_output_cost": float,
-                "daily_total_cost": float,
-                "weekly_total_cost": float,
-                "monthly_total_cost": float,
-                "yearly_total_cost": float,
-                "one_time_total_cost": float
-             }
-        },
-    ],
-    "cost":{
-      "daily_input_cost": float,
-      "weekly_input_cost": float,
-      "monthly_input_cost": float,
-      "yearly_input_cost": float,
-      "one_time_input_cost": float,
-      "daily_output_cost": float,
-      "weekly_output_cost": float,
-      "monthly_output_cost": float,
-      "yearly_output_cost": float,
-      "one_time_output_cost": float,
-      "daily_total_cost": float,
-      "weekly_total_cost": float,
-      "monthly_total_cost": float,
-      "yearly_total_cost": float,
-      "one_time_total_cost": float
+    "estimate": {
+        "project_name": "string",
+        "components":[
+            {
+                 "component_index": int,
+                 "component_name":"string",
+                 "n_input_tokens": int,
+                 "n_output_tokens": int,
+                 "llm":{
+                    "provider_id": "string",
+                    "provider_name_pretty": "string",
+                    "model_id": "string",
+                    "model_name_pretty": "string",
+                    "cost_per_1k_input_tokens": float,
+                    "cost_per_1k_output_tokens": float
+                 },
+                 "recurrence": "string",
+                 "cost":{
+                    "daily_input_cost": float,
+                    "weekly_input_cost": float,
+                    "monthly_input_cost": float,
+                    "yearly_input_cost": float,
+                    "one_time_input_cost": float,
+                    "daily_output_cost": float,
+                    "weekly_output_cost": float,
+                    "monthly_output_cost": float,
+                    "yearly_output_cost": float,
+                    "one_time_output_cost": float,
+                    "daily_total_cost": float,
+                    "weekly_total_cost": float,
+                    "monthly_total_cost": float,
+                    "yearly_total_cost": float,
+                    "one_time_total_cost": float
+                 }
+            },
+        ],
+        "cost":{
+          "daily_input_cost": float,
+          "weekly_input_cost": float,
+          "monthly_input_cost": float,
+          "yearly_input_cost": float,
+          "one_time_input_cost": float,
+          "daily_output_cost": float,
+          "weekly_output_cost": float,
+          "monthly_output_cost": float,
+          "yearly_output_cost": float,
+          "one_time_output_cost": float,
+          "daily_total_cost": float,
+          "weekly_total_cost": float,
+          "monthly_total_cost": float,
+          "yearly_total_cost": float,
+          "one_time_total_cost": float
+        }
     }
 }
 ```
