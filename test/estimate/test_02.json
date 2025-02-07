@@ -1,0 +1,13 @@
+{
+   "project_name":"recurrence-test",
+   "components":[
+      {
+         "component_name":"test-component-00",
+         "component_index":0,
+         "model_id":"openai.gpt-4-turbo",
+         "n_input_tokens":1000000,
+         "n_output_tokens":500000,
+         "recurrence":"weekly"
+      }
+   ]
+}
